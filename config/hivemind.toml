@@ -1,0 +1,21 @@
+# Hivemind main configuration (defaults; committed to git).
+# Override locally with config/hivemind.local.toml (gitignored).
+# Secrets (DingTalk client id/secret) do NOT live here — use .env.
+
+[monitor]
+# How often to poll capture-pane for each terminal (seconds).
+poll_interval_sec = 2.0
+# How many lines of pane to capture per poll.
+capture_lines = 200
+
+[hooks]
+# Local HTTP endpoint that receives Claude Code hook events.
+enabled = true
+host = "127.0.0.1"
+port = 8787
+
+[router]
+# Symbol that addresses a specific terminal, e.g. "@web build the site".
+address_prefix = "@"
+# Symbol that introduces a slash-command, e.g. "/ls".
+command_prefix = "/"

@@ -1,0 +1,10 @@
+⏺ I need to run `rm -rf build/` to clean the stale artifacts.
+
+  Bash(rm -rf build/)
+  ⎿  Running this command will delete the build directory.
+
+╭──────────────────────────────────────────────────────────────╮
+│ Do you want to proceed?                                        │
+│ ❯ 1. Yes                                                       │
+│   2. No, and tell Claude what to do differently                │
+╰──────────────────────────────────────────────────────────────╯

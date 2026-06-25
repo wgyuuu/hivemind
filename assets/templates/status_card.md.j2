@@ -1,0 +1,6 @@
+### 🧠 Hivemind 终端状态
+
+{% for t in terminals -%}
+- **{{ t.name }}** · `{{ t.session }}` — {{ t.state_emoji }} {{ t.state }}
+{% endfor %}
+_更新于 {{ updated_at }}_

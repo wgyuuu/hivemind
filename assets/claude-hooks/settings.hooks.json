@@ -1,0 +1,27 @@
+{
+  "_comment": "Template merged into ~/.claude/settings.json by scripts/install-hooks.sh. Each Claude terminal POSTs lifecycle events to the local Hivemind hooks server so the Monitor gets precise, low-latency done/permission signals (vs screen scraping). @PORT@ is replaced with hooks.port from config. $HIVEMIND_TERM is exported per tmux session (see adapters/tmux.py) so events carry the terminal name.",
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "curl -s -m 2 -X POST http://127.0.0.1:@PORT@/event -H 'Content-Type: application/json' -d \"{\\\"event\\\":\\\"Stop\\\",\\\"terminal\\\":\\\"${HIVEMIND_TERM:-unknown}\\\"}\" >/dev/null 2>&1"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "curl -s -m 2 -X POST http://127.0.0.1:@PORT@/event -H 'Content-Type: application/json' -d \"{\\\"event\\\":\\\"Notification\\\",\\\"terminal\\\":\\\"${HIVEMIND_TERM:-unknown}\\\",\\\"message\\\":\\\"${CLAUDE_NOTIFICATION:-}\\\"}\" >/dev/null 2>&1"
+          }
+        ]
+      }
+    ]
+  }
+}

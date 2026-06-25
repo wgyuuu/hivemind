@@ -1,0 +1,12 @@
+# Only these DingTalk senders may issue commands. Empty list = deny all.
+# Find your staffId in the DingTalk admin console (or log it on first message).
+
+[senders]
+# staffId -> human label
+allow = [
+    # "01234567890123456789",  # me
+]
+
+[policy]
+# If true, an unknown sender gets a polite rejection; if false, silently ignored.
+reply_on_reject = true

@@ -1,0 +1,6 @@
+⏺ Done. The authentication module now uses rotating session tokens.
+
+╭──────────────────────────────────────────────────────────────╮
+│ >                                                              │
+╰──────────────────────────────────────────────────────────────╯
+  ? for shortcuts

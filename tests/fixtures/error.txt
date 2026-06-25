@@ -1,0 +1,7 @@
+⏺ Bash(python scripts/migrate.py)
+  ⎿  Traceback (most recent call last):
+       File "scripts/migrate.py", line 42, in <module>
+         run_migration()
+     RuntimeError: Error: database connection refused on 127.0.0.1:5432
+
+> the migration failed, see above

@@ -1,0 +1,2 @@
+# Put real `tmux capture-pane -p` samples here (busy.txt, idle.txt, waiting.txt, error.txt)
+# to calibrate core.state.detect_state across Claude Code versions.

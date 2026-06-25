@@ -1,0 +1,13 @@
+# Preset terminals to spawn on startup. Each maps to a tmux session `cc-<name>`.
+# You can also create terminals at runtime via `/spawn <name>` from DingTalk.
+
+[[terminal]]
+name = "web"
+cwd = "~/projects/web"
+# Command launched inside the tmux session.
+command = "claude"
+
+[[terminal]]
+name = "infra"
+cwd = "~/projects/infra"
+command = "claude"
