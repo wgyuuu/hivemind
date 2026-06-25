@@ -1,0 +1,5 @@
+# Copy to hivemind.local.toml to override defaults on this machine.
+# This file (the .example) is committed; hivemind.local.toml is gitignored.
+
+# [monitor]
+# poll_interval_sec = 1.0
